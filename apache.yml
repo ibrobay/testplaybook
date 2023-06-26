@@ -1,0 +1,23 @@
+- hosts: db
+  become: true
+  tasks:
+  - name: install apache
+    yum: name=httpd state=present
+  - name: start apache
+    service: name=httpd state=started
+  - name: copy index file
+    copy:
+      src: index.html
+      dest: /var/www/html/
+- hosts: all
+  become: true
+  tasks:
+  - name: install vim
+    package:
+      name: vim
+      state: present
+- hosts: 34.207.68.246
+  tasks:
+  - name: check system resources
+    shell: df -h
+
