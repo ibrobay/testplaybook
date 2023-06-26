@@ -1,6 +1,6 @@
 ---
   - name: "Playing with Ansible"
-    hosts: localhost
+    hosts: 34.207.68.246
     connection: local
     tasks:
 
