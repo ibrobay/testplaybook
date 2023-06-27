@@ -1,0 +1,10 @@
+# This playbook deploys a simple standalone apache on 3 server.
+
+- hosts: web
+  become: yes
+  roles:
+   - apache
+- hosts: appServers
+  become: yes
+  roles:
+   - tomcat
