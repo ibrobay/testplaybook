@@ -16,7 +16,7 @@
     package:
       name: vim
       state: present
-- hosts: 3.87.8.74
+- hosts: localhost
   tasks:
   - name: check system resources
     shell: df -h
